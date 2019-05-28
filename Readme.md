@@ -6,3 +6,15 @@
 
 
 
+新增Laya原生微信排行榜
+
+注意：主域使用Texture2D来渲染
+        this.texture2D.loadImageSource(this.sharedCanvas, true);
+        if (this.textureDraw) {
+            this.textureDraw.destroy();
+        }
+        this.textureDraw = new Laya.Texture(this.texture2D);
+        this.sharedSprite.graphics.drawTexture(this.textureDraw, 0, 0, this.textureDraw.width, this.textureDraw.height);
+
+
+
